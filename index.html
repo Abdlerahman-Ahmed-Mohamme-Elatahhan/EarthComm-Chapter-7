@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 7 – Earth's Natural Resources </title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --accent: #1a3a5c;
+      --accent2: #c0392b;
+      --gold: #d4a017;
+      --bg: #f9f6f0;
+      --card: #ffffff;
+      --text: #1a1a1a;
+      --muted: #5a5a5a;
+      --border: #e0d9cf;
+      --green: #1a5c3a;
+      --green-bg: #eaf5ee;
+      --red-bg: #fdf0ee;
+      --blue-bg: #eaf0f9;
+      --gold-bg: #fdf8ee;
+      --purple: #3a1a6a;
+      --purple-bg: #f3eefa;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    /* ─── HEADER ─── */
+    .hero {
+      background: var(--accent);
+      color: #fff;
+      padding: 3rem 2.5rem 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03) 0px, rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 20px);
+    }
+
+    .hero-inner {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-label {
+      font-family: 'Source Serif 4', serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.55);
+      margin-bottom: 0.6rem;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 900;
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.65);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .pill {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* ─── TOC ─── */
+    .toc-bar {
+      background: var(--accent2);
+      padding: 0.75rem 2.5rem;
+    }
+
+    .toc-bar nav {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      align-items: center;
+    }
+
+    .toc-bar a {
+      color: rgba(255, 255, 255, 0.88);
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      font-family: 'Source Serif 4', serif;
+    }
+
+    .toc-bar a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* ─── WRAPPER ─── */
+    .wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem;
+    }
+
+    /* ─── SECTION ─── */
+    .section {
+      margin-bottom: 3rem;
+      background: var(--card);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+    }
+
+    .section-num {
+      background: var(--accent);
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      min-width: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.2rem 0.5rem;
+    }
+
+    .section-title-block {
+      background: var(--accent);
+      padding: 1.2rem 1.5rem;
+      flex: 1;
+    }
+
+    .section-title-block h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+    }
+
+    .section-title-block .subtitle {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.6);
+      margin-top: 2px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .section-body {
+      padding: 1.5rem 1.75rem;
+    }
+
+    /* ─── KEY CONCEPT ─── */
+    .key-concept {
+      background: var(--blue-bg);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 0.9rem 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .key-concept .kc-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 3px;
+    }
+
+    .key-concept p {
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    /* ─── TOPIC BLOCK ─── */
+    .topic {
+      margin-bottom: 1.4rem;
+    }
+
+    .topic h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ─── BULLET LIST ─── */
+    ul.notes {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul.notes li {
+      padding: 5px 0 5px 1.4rem;
+      position: relative;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    ul.notes li::before {
+      content: '◆';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 9px;
+      top: 8px;
+    }
+
+    ul.notes li strong {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* ─── TABLE ─── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin: 0.8rem 0 1rem;
+    }
+
+    .data-table th {
+      background: var(--accent);
+      color: #fff;
+      padding: 7px 12px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.3px;
+    }
+
+    .data-table td {
+      padding: 7px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .data-table tr:nth-child(even) td {
+      background: #f9f7f4;
+    }
+
+    .data-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* ─── PROCESS BOX ─── */
+    .process {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0;
+      background: #f4f2ee;
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      margin: 0.8rem 0;
+      font-size: 13px;
+    }
+
+    .process .step {
+      background: var(--accent);
+      color: #fff;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .process .arrow {
+      color: var(--muted);
+      padding: 0 6px;
+      font-size: 14px;
+    }
+
+    /* ─── EXAM ALERT ─── */
+    .exam-alert {
+      background: #fff8e8;
+      border: 1.5px solid var(--gold);
+      border-radius: 8px;
+      padding: 0.85rem 1.2rem;
+      margin-top: 1.2rem;
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+
+    .exam-alert .icon {
+      font-size: 18px;
+      line-height: 1;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .exam-alert .content {
+      flex: 1;
+    }
+
+    .exam-alert .ea-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #8a6500;
+      margin-bottom: 3px;
+    }
+
+    .exam-alert p {
+      font-size: 13px;
+      line-height: 1.6;
+      color: #5a4200;
+    }
+
+    /* ─── VOCAB BOX ─── */
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 8px;
+      margin: 0.8rem 0;
+    }
+
+    .vocab-card {
+      background: var(--purple-bg);
+      border-radius: 8px;
+      padding: 9px 12px;
+      border-left: 3px solid var(--purple);
+    }
+
+    .vocab-card .term {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--purple);
+      letter-spacing: 0.3px;
+      margin-bottom: 2px;
+    }
+
+    .vocab-card .def {
+      font-size: 12px;
+      color: #3a3a5a;
+      line-height: 1.5;
+    }
+
+    /* ─── COMPARE TABLE ─── */
+    .compare-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 0.75rem 0;
+    }
+
+    .compare-card {
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 13px;
+    }
+
+    .compare-card.pros {
+      background: var(--green-bg);
+      border-left: 3px solid var(--green);
+    }
+
+    .compare-card.cons {
+      background: var(--red-bg);
+      border-left: 3px solid var(--accent2);
+    }
+
+    .compare-card .cc-label {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 5px;
+    }
+
+    .compare-card.pros .cc-label {
+      color: var(--green);
+    }
+
+    .compare-card.cons .cc-label {
+      color: var(--accent2);
+    }
+
+    .compare-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .compare-card ul li {
+      padding: 3px 0;
+      font-size: 13px;
+    }
+
+    .compare-card.pros ul li::before {
+      content: '✓ ';
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    .compare-card.cons ul li::before {
+      content: '✗ ';
+      color: var(--accent2);
+      font-weight: 700;
+    }
+
+    /* ─── FORMULA BOX ─── */
+    .formula {
+      background: #1a1a2e;
+      color: #e8e8f0;
+      border-radius: 8px;
+      padding: 0.85rem 1.2rem;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      margin: 0.6rem 0;
+      line-height: 1.8;
+    }
+
+    .formula .eq-label {
+      font-family: 'Source Serif 4', serif;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 3px;
+    }
+
+    .formula .eq {
+      color: #a8d8ea;
+    }
+
+    /* ─── DIVIDER ─── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.2rem 0;
+    }
+
+    /* ─── QUICK CHECK ─── */
+    .quick-check {
+      background: var(--gold-bg);
+      border: 1px solid #e8d090;
+      border-radius: 8px;
+      padding: 0.9rem 1.2rem;
+      margin-top: 1.2rem;
+    }
+
+    .quick-check .qc-title {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #8a6500;
+      margin-bottom: 6px;
+    }
+
+    .quick-check ol {
+      padding-left: 1.2rem;
+      font-size: 13px;
+      color: #5a4200;
+    }
+
+    .quick-check ol li {
+      margin-bottom: 4px;
+    }
+
+    /* ─── FOOTER ─── */
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
+    }
+
+    @media print {
+      .section {
+        page-break-inside: avoid;
+      }
+
+      .toc-bar {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-label">EarthComm · Chapter 7</div>
+      <h1>Earth's Natural Resources</h1>
+      <div class="hero-sub">Complete Study Notes · Sections 1 – 7</div>
+      <div class="hero-pills">
+        <span class="pill">⚡ Electricity &amp; Energy</span>
+        <span class="pill">🪨 Coal</span>
+        <span class="pill">🛢️ Petroleum &amp; Gas</span>
+        <span class="pill">🌍 Environmental Impact</span>
+        <span class="pill">☀️ Solar &amp; Wind</span>
+        <span class="pill">💎 Ore Resources</span>
+        <span class="pill">⛏️ Mining</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="toc-bar">
+    <nav>
+      <span style="color:rgba(255,255,255,0.4);font-size:11px;letter-spacing:1px;text-transform:uppercase;">Jump
+        to:</span>
+      <a href="#s1">S1 – Electricity</a>
+      <a href="#s2">S2 – Coal</a>
+      <a href="#s3">S3 – Petroleum &amp; Gas</a>
+      <a href="#s4">S4 – Environment</a>
+      <a href="#s5">S5 – Solar &amp; Wind</a>
+      <a href="#s6">S6 – Ores</a>
+      <a href="#s7">S7 – Mining</a>
+    </nav>
+  </div>
+
+  <div class="wrapper">
+
+    <!-- ══════════════════════════════════════════════════════ -->
+    <!-- SECTION 1 -->
+    <!-- ══════════════════════════════════════════════════════ -->
+    <div class="section" id="s1">
+      <div class="section-header">
+        <div class="section-num">1</div>
+        <div class="section-title-block">
+          <div class="subtitle">Section 1 · Digging Deeper</div>
+          <h2>Electricity and Your Community</h2>
+        </div>
+      </div>
+      <div class="section-body">
+
+        <div class="key-concept">
+          <div class="kc-label">Core Idea</div>
+          <p>Electricity is generated from many energy resources — fossil fuels, nuclear, hydro, geothermal, solar, and
+            wind. Each has advantages and disadvantages. Fossil fuels supply ~70% of US electricity.</p>
+        </div>
+
+        <div class="topic">
+          <h3>⚡ Electric Power vs. Electric Energy</h3>
+          <ul class="notes">
+            <li><strong>Electric Power:</strong> the <em>rate</em> at which electricity does work at a point in time.
+              Unit = <strong>Watt (W)</strong>.</li>
+            <li><strong>Electric Energy:</strong> the total <em>amount</em> of work done by electricity. Unit =
+              <strong>Watt-hour (Wh)</strong>.
+            </li>
+            <li>Example: A 1200-W hair dryer used for 15 min uses <strong>300 Wh</strong> of electric energy.</li>
+            <li><strong>Capacity</strong> = the rate at which an appliance transforms electric energy (found on the
+              label).</li>
+          </ul>
+          <div class="exam-alert">
+            <div class="icon">⚠️</div>
+            <div class="content">
+              <div class="ea-label">Exam Watch</div>
+              <p>Know the difference: Power (watts, rate, moment in time) vs. Energy (watt-hours, total amount used).
+                Expect calculation questions like the hair dryer example. P<sub>w</sub>=ET<sup>-1</sup> (power = energy
+                / time)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="topic">
+          <h3>🔥 Fossil Fuels &amp; Steam Turbines</h3>
+          <ul class="notes">
+            <li>Fossil fuels (coal, petroleum, natural gas) supply <strong>~70%</strong> of US electricity.</li>
+            <li>In a <strong>fossil-fueled steam turbine</strong>: fuel burned → steam produced → steam turns turbine
+              blades → shaft turns generator → electricity produced.</li>
+            <li>In a <strong>nuclear steam turbine</strong>: uranium fission produces heat (instead of burning fuel) →
+              same steam process follows.</li>
+          </ul>
+          <div class="process">
+            <span class="step">Burn Fuel / Fission</span><span class="arrow">→</span>
+            <span class="step">Steam</span><span class="arrow">→</span>
+            <span class="step">Turbine</span><span class="arrow">→</span>
+            <span class="step">Generator</span><span class="arrow">→</span>
+            <span class="step">Electricity</span>
+          </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="topic">
+          <h3>💧 Hydroelectric Power</h3>
+          <ul class="notes">
+            <li>Water is the <strong>top renewable resource</strong> used to generate electricity.</li>
+            <li><strong>70%</strong> of US hydroelectric power comes from Pacific &amp; Rocky Mountain states.</li>
+            <li>Two types:
+              <ol style="padding-left:1.2rem;font-size:14px;">
+                <li><strong>Falling-water system:</strong> dams build reservoirs → water falls through pipes → pressure
+                  turns turbine.</li>
+                <li><strong>Run-of-the-river system:</strong> river current pushes turbine blades (no water storage;
+                  depends on seasonal flow).</li>
+              </ol>
+            </li>
+          </ul>
+          <div class="compare-row">
+            <div class="compare-card pros">
+              <div class="cc-label">Advantages</div>
+              <ul>
+                <li>Renewable resource</li>
+                <li>Cheap power source</li>
+                <li>Little air pollution (no combustion)</li>
+                <li>Limited thermal pollution vs. nuclear</li>
+                <li>Fast startup, adjustable output</li>
+              </ul>
+            </div>
+            <div class="compare-card cons">
+              <div class="cc-label">Disadvantages</div>
+              <ul>
+                <li>Dams harm local ecosystems (habitats)</li>
+                <li>Best sites already developed</li>
+                <li>Depends on seasonal water flow</li>
+                <li>Vulnerable to droughts</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="topic">
+          <h3>🌋 Geothermal &amp; Other Sources</h3>
+          <ul class="notes">
+            <li>Renewable sources (solar, wind, biomass) + geothermal supply <strong>less than 4%</strong> of US
+              electricity from utilities.</li>
+            <li><strong>Geothermal energy:</strong> heat from inside Earth. Classified as <em>nonrenewable</em> but
+              essentially inexhaustible. Most plants are in the <strong>western US</strong> (magma near surface).</li>
+            <li><strong>Biomass:</strong> wood, municipal solid waste, agricultural waste — also used to generate power.
+            </li>
+          </ul>
+        </div>
+
+        <div class="vocab-grid">
+          <div class="vocab-card">
+            <div class="term">Nuclear Fission</div>
+            <div class="def">Atomic nucleus splits → releases neutrons + vast energy (used in reactors).</div>
+          </div>
+          <div class="vocab-card">
+            <div class="term">Nuclear Fusion</div>
+            <div class="def">Lightweight nuclei combine → heavier nuclei + energy (powers the Sun; not yet practical).
+            </div>
+          </div>
+          <div class="vocab-card">
+            <div class="term">Renewable Resource</div>
+            <div class="def">Can be replaced in nature at a rate close to its rate of use (e.g., water, wind, solar).
+            </div>
+          </div>
+          <div class="vocab-card">
+            <div class="term">Nonrenewable Resource</div>
+            <div class="def">Exists in a fixed amount OR used faster than it can be replaced (e.g., fossil fuels).</div>
+          </div>
+          <div class="vocab-card">
+            <div class="term">Photovoltaic Energy</div>
+            <div class="def">Direct conversion of solar radiation to electricity (solar cells).</div>
+          </div>
+          <div class="vocab-card">
+            <div class="term">Turbine</div>
+            <div class="def">Rotating machine that converts kinetic energy of fluid flow into mechanical rotation.</div>
+          </div>
+        </div>
+
+        <div class="quick-check">
+          <div class="qc-title">🎯 Key Questions (from Checking Up)</div>
+          <ol>
+            <li>What is the difference between electric energy and electric power?</li>
+            <li>Compare &amp; contrast steam turbines vs. hydroelectric power generation.</li>
+            <li>What are the advantages and disadvantages of hydroelectric power (Earth systems perspective)?</li>
+            <li>Why are biomass and wind called renewable energy sources?</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════ -->
+    <!-- SECTION 2 -->
+    <!-- ══════════════════════════════════════════════════════ -->
+    <div class="section" id="s2">
+      <div class="section-header">
+        <div class="section-num">2</div>
+        <div class="section-title-block">
+          <div class="subtitle">Section 2 · Digging Deeper</div>
+          <h2>Energy From Coal</h2>
+        </div>
+      </div>
+      <div class="section-body">
+
+        <div class="key-concept">
+          <div class="kc-label">Core Idea</div>
+          <p>Coal is ancient solar energy stored as chemical energy in rock. It forms from plant remains buried over
+            millions of years and exists in several ranks (types), each with different carbon content and heat value.
+          </p>
+        </div>
+
+        <div class="topic">
+          <h3>☀️ The Origin of Coal's Energy (Photosynthesis → Fossil Fuel)</h3>
+          <ul class="notes">
+            <li>Only <strong>4 main energy sources</strong> exist on Earth: solar radiation, Earth's interior heat,
+              radioactive decay, and tides.</li>
+            <li>Coal's energy originally comes from <strong>solar radiation</strong>, stored as chemical energy through
+              <strong>photosynthesis</strong>.
+            </li>
+            <li>Only <strong>0.06%</strong> of solar energy reaching Earth is stored in plants — but that amount is
+              enormous.</li>
+          </ul>
+          <div class="formula">
+            <div class="eq-label">Photosynthesis</div>
+            <div class="eq">6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ (glucose) + 6O₂</div>
+            <div class="eq-label" style="margin-top:8px;">Oxidation (Respiration/Combustion)</div>
+            <div class="eq">6O₂ + C₆H₁₂O₆ → 6H₂O + 6CO₂ + energy (heat)</div>
+          </div>
+          <ul class="notes">
+            <li>Photosynthesis and oxidation are <strong>reverse reactions</strong> of each other.</li>
+            <li>Most carbon returns to the atmosphere as CO₂. A very small fraction is buried in sediments → becomes
+              <strong>peat, coal, petroleum</strong> (fossil fuels).
+            </li>
+            <li>Fossil fuels are consumed <strong>far faster</strong> than they form → classified as
+              <strong>nonrenewable</strong>.
+            </li>
+          </ul>
+        </div>
+
+        <hr class="divider">
+
+        <div class="topic">
+          <h3>🪨 Formation of Coal (Peat → Anthracite)</h3>
+          <ul class="notes">
+            <li>Coal forms from <strong>peat</strong> — unconsolidated plant remains from bogs/swamps (stems, leaves,
+              bark visible).</li>
+            <li>Coal swamps: low-lying coastal freshwater areas, separated from mud/sand sources.</li>
+            <li>Plant material must be <strong>buried by sediment</strong>; compaction squeezes out water; methane gas
+              escapes; carbon percentage increases.</li>
+            <li>As carbon % increases, coal "increases in <strong>rank</strong>".</li>
+            <li>It takes <strong>35 meters of original peat</strong> to produce <strong>1 foot of bituminous
+                coal</strong>.</li>
+          </ul>
+          <div class="process">
+            <span class="step">Peat</span><span class="arrow">→</span>
+            <span class="step">Lignite</span><span class="arrow">→</span>
+            <span class="step">Sub-bituminous</span><span class="arrow">→</span>
+            <span class="step">Bituminous</span><span class="arrow">→</span>
+            <span class="step">Anthracite</span><span class="arrow">→</span>
+            <span class="step">Graphite</span>
+          </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="topic">
+          <h3>📊 Types of Coal — Carbon &amp; Heat Content</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Coal Rank</th>
+                <th>Carbon Content (%)</th>
+                <th>Heat Content (Btu/lb)</th>
+                <th>Main Use</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lignite (brown coal)</td>
+                <td>25–35%</td>
+                <td>4,000–8,300</td>
+                <td>Electric power generation</td>
+              </tr>
+              <tr>
+                <td>Sub-bituminous</td>
+                <td>35–45%</td>
+                <td>8,300–11,500</td>
+                <td>Heating (low sulfur)</td>
+              </tr>
+              <tr>
+                <td>Bituminous</td>
+                <td>45–86%</td>
+                <td>10,500–14,000</td>
+                <td>Electricity + steel coke</td>
+              </tr>
+              <tr>
+                <td>Anthracite</td>
+                <td>86–98%</td>
+                <td>&gt;14,000</td>
+                <td>Home heating (scarce in eastern US)</td>
+              </tr>
+            </tbody>
+          </table>
+          <ul class="notes">
+            <li><strong>Higher rank = more carbon = more heat content per pound.</strong></li>
+            <li><strong>Btu (British thermal unit)</strong> = heat needed to raise 1 lb of water by 1°F.</li>
+            <li><strong>Sulfur</strong> in coal: released as SO₂ when burned → reacts with water → <strong>sulfuric acid
+                → acid rain</strong>. Sulfur content: 1–5% depending on original plant material.</li>
+            <li><strong>Ash</strong>: the part of coal that doesn't burn (sand, silt, clay). Reduces heat content and
+              must be discarded.</li>
+          </ul>
+        </div>
+
+        <hr class="divider">
+
+        <div class="topic">
+          <h3>⛏️ Coal Mining &amp; Production</h3>
+          <ul class="notes">
+            <li>In 2009, <strong>45%</strong> of US electricity was produced from coal.</li>
+            <li>Coal holds <strong>92%</strong> of all fossil fuel reserves — the largest reserve of any fossil fuel.
+            </li>
+            <li><strong>Underground mining methods:</strong> drift, slope, shaft mining.</li>
+            <li><strong>Surface mining methods:</strong> area, contour, mountaintop removal, auger mining.</li>
+            <li>Three factors determining if coal is economical to mine:
+              <ol style="padding-left:1.2rem;font-size:14px;">
+                <li>Transportation cost to where it is used.</li>
+                <li>Environmental concerns of mining and use.</li>
+                <li>Quality, thickness, volume, and depth of the coal.</li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+
+        <div class="quick-check">
+          <div class="qc-title">🎯 Key Questions (from Checking Up)</div>
+          <ol>
+            <li>Explain how solar energy is stored and released by photosynthesis and oxidation.</li>
+            <li>Describe the formation of coal from plant matter to anthracite.</li>
+            <li>Why is heat content (Btu/lb) important for determining coal use?</li>
+            <li>What is the origin of sulfur in coal, and why is it undesirable?</li>
+            <li>What major factors determine if a coal seam is economical/geological suitable for mining?</li>
+            <li>What factors have determined trends in coal consumption during the 20th century?</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════ -->
+    <!-- SECTION 3 -->
+    <!-- ══════════════════════════════════════════════════════ -->
+    <div class="section" id="s3">
+      <div class="section-header">
+        <div class="section-num">3</div>
+        <div class="section-title-block">
+          <div class="subtitle">Section 3 · Digging Deeper</div>
+          <h2>Energy From Petroleum and Natural Gas</h2>
+        </div>
+      </div>
+      <div class="section-body">
+
+        <div class="key-concept">
+          <div class="kc-label">Core Idea</div>
+          <p>Petroleum (crude oil) and natural gas originate from buried organic matter in sedimentary rocks. They
+            migrate through porous rocks until trapped by seals, forming reservoirs. The US is heavily dependent on oil
+            but is running low on domestic reserves.</p>
+        </div>
+
+        <div class="topic">
+          <h3>🛢️ Nature &amp; Origin of Petroleum and Natural Gas</h3>
+          <ul class="notes">
+            <li><strong>Petroleum (crude oil):</strong> liquid made mainly of organic compounds (simple to complex).
+            </li>
+            <li><strong>Natural gas:</strong> mainly <strong>methane (CH₄)</strong>, a single organic compound.</li>
+            <li>Raw material: <strong>remains of tiny marine plants and animals</strong> (plankton) deposited with
+              sediments on ocean/lake floors.</li>
+            <li>As sediments are buried deeper → temperature and pressure increase → organic matter undergoes
+              <strong>maturation</strong> → converted into oil and gas.
+            </li>
+            <li>Petroleum geologists call the right burial depth the <strong>"oil window"</strong> or <strong>"gas
+                window"</strong>, and the source region <strong>"the kitchen."</strong></li>
+            <li>Oil and gas are <strong>less dense than water</strong> → they rise through porous rocks.</li>
+          </ul>
+        </div>
+
+        <hr class="divider">
+
+        <div class="topic">
+          <h3>🧱 Porosity, Permeability, Seals &amp; Reservoirs</h3>
+          <ul class="notes">
+            <li><strong>Porosity:</strong> % of pore space in a rock = (volume of pores ÷ bulk volume) × 100. Loose sand
+              = 30–40% porosity.</li>
+            <li><strong>Permeability:</strong> how easily fluids flow through connected pores in response to pressure
+              differences. High porosity alone is not enough — pores must be connected.</li>
+            <li><strong>Cement:</strong> new mineral material deposited around sand grains during burial → reduces
+              porosity.</li>
+            <li><strong>Source rocks:</strong> mudstone/shale rich in organic matter where oil and gas are generated
+              (impermeable → fluids move slowly).</li>
+            <li><strong>Seal:</strong> impermeable layer with convex-upward shape (like an umbrella) that traps oil and
+              gas from rising to the surface.</li>
+            <li><strong>Reservoir:</strong> large body of porous + permeable sedimentary rock containing trapped oil/gas
+              below a seal. Good reservoir rocks = high porosity + high permeability.</li>
+            <li><strong>Closure:</strong> vertical distance from the top of the seal to the spill point — giant
+              reservoirs can have closures of tens of meters and hold hundreds of millions of barrels.</li>
+          </ul>
+        </div>
+
+        <hr class="divider">
+
+        <div class="topic">
+          <h3>🔧 Recovery of Petroleum</h3>
+          <ul class="notes">
+            <li>Oil removed by drilling deep wells (vertical, then diverted sideways at precise angles).</li>
+            <li>Sometimes oil flows under its own pressure; usually it must be <strong>pumped out</strong>.</li>
+            <li>Much oil remains trapped in pore spaces even after years of production (adheres to pore walls).</li>
+            <li><strong>Secondary recovery:</strong> techniques to recover remaining oil — most common is injecting
+              <strong>hot steam</strong> into the well to make oil flow more easily.
+            </li>
+          </ul>
+        </div>
+
+        <hr class="divider">
+
+        <div class="topic">
+          <h3>📈 History &amp; Production in the US</h3>
+          <ul class="notes">
+            <li>First successful oil drilling: <strong>Colonel Edwin Drake, 1859, Pennsylvania</strong> (70 ft depth).
+            </li>
+            <li><strong>Spindletop Oil Field, Texas, 1901</strong> — massive discovery that boosted petroleum industry.
+            </li>
+            <li>By <strong>1947</strong>, use of petroleum + natural gas exceeded coal.</li>
+            <li>In <strong>1920</strong>, US produced &gt;2/3 of world's oil. By <strong>2009</strong>, only
+              <strong>11%</strong> of world's oil.
+            </li>
+            <li>US has less than <strong>35%</strong> of its original oil remaining.</li>
+            <li>Texas = largest oil-producing state since late 1920s.</li>
+            <li><strong>Sedimentary basins</strong> = areas where sediments accumulate to great thicknesses; where
+              oil/gas are found.</li>
+          </ul>
+        </div>
+
+        <hr class="divider">
+
+        <div class="topic">
+          <h3>🔮 Future of Petroleum &amp; Alternatives</h3>
+          <ul class="notes">
+            <li>USGS estimates: 95% probability = at least <strong>2,250 billion barrels</strong> globally; 50% estimate
+              = ~3,000 billion barrels.</li>
+            <li>Future production will level off then decline → growing shortage → need for alternative energy.</li>
+            <li><strong>Tar sands</strong> (sandstones with solid organic matter) and <strong>oil shales</strong>
+              already producing and will be major future sources. Canada is especially rich in tar sands.</li>
+            <li>Major exploration frontier = <strong>deep offshore ocean areas</strong>.</li>
+            <li>Arctic National Wildlife Refuge (ANWR) — believed to contain billions of barrels; drilling highly
+              debated.</li>
+          </ul>
+        </div>
+
+        <div class="vocab-grid">
+          <div class="vocab-card">
+            <div class="term">Petroleum (Crude Oil)</div>
+            <div class="def">Oily, flammable liquid of organic compounds produced in sedimentary rocks during burial of
+              organic matter.</div>
+          </div>
+          <div class="vocab-card">
+            <div class="term">Natural Gas</div>
+            <div class="def">Gas (mainly methane CH₄) produced in sedimentary rocks during burial of organic matter.
+            </div>
+          </div>
+          <div class="vocab-card">
+            <div class="term">Feedstock</div>
+            <div class="def">Raw material (e.g., petroleum) supplied to a processing plant to produce manufactured
+              material (e.g., plastics).</div>
+          </div>
+          <div class="vocab-card">
+            <div class="term">Source Rocks</div>
+            <div class="def">Sedimentary rocks rich in organic matter where petroleum and natural gas are generated.
+            </div>
+          </div>
+          <div class="vocab-card">
+            <div class="term">Secondary Recovery</div>
+            <div class="def">Techniques (like injecting hot steam) to recover oil still trapped in sediments after
+              primary production.</div>
+          </div>
+          <div class="vocab-card">
+            <div class="term">Sedimentary Basin</div>
+            <div class="def">Area of Earth's crust where sediments accumulate to great thicknesses — where oil/gas are
+              found.</div>
+          </div>
+        </div>
+
+        <div class="exam-alert">
+          <div class="icon">⚠️</div>
+          <div class="content">
+            <div class="ea-label">Exam Watch</div>
+            <p>Be able to explain why oil and gas are nonrenewable (formation takes millions of years). Know the full
+              pathway: organic matter → source rock → maturation → migration → reservoir → seal. Understand why
+              extracting ALL oil from a reservoir is impossible (oil adheres to pore walls).</p>
+          </div>
+        </div>
+
+        <div class="quick-check">
+          <div class="qc-title">🎯 Key Questions (from Checking Up)</div>
+          <ol>
+            <li>What is the origin of oil and natural gas?</li>
+            <li>Why do some people refer to the present times as the "petroleum age"?</li>
+            <li>What are the advantages of petroleum and natural gas as fuels?</li>
+            <li>Why are oil and gas considered nonrenewable resources?</li>
+            <li>Why is it not possible to extract all of the oil from a reservoir?</li>
+            <li>What are the benefits of predicting oil and gas reserves?</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════ -->
+    <!-- SECTION 4 -->
+    <!-- ══════════════════════════════════════════════════════ -->
+    <div class="section" id="s4">
+      <div class="section-header">
+        <div class="section-num">4</div>
+        <div class="section-title-block">
+          <div class="subtitle">Section 4 · Digging Deeper</div>
+          <h2>Environmental Impacts and Energy Consumption</h2>
+        </div>
+      </div>
+      <div class="section-body">
+
+        <div class="key-concept">
+          <div class="kc-label">Core Idea</div>
+          <p>Burning fossil fuels produces CO₂ (greenhouse effect, global warming) and sulfur dioxide (acid rain). Oil
+            spills devastate marine and coastal ecosystems. Both problems can be partially mitigated by technology, but
+            require understanding of chemistry and Earth systems.</p>
+        </div>
+
+        <div class="topic">
+          <h3>🌍 Fossil Fuels and the Carbon Cycle</h3>
+          <ul class="notes">
+            <li>Fossil fuels supply <strong>85%</strong> of primary energy in the US and produce <strong>98%</strong> of
+              US CO₂ emissions.</li>
+            <li>CO₂ produced per unit of energy: <strong>natural gas</strong> emits ~½ as much as coal;
+              <strong>petroleum</strong> ~¾ as much as coal.
+            </li>
+            <li><strong>First Law of Thermodynamics:</strong> energy cannot be created or destroyed — only converted
+              (chemical energy → heat energy when fuel burned).</li>
+            <li><strong>Law of Conservation of Matter:</strong> matter cannot be created or destroyed. Carbon from
+              fossil fuels never disappears — it moves between Earth system reservoirs.</li>
+            <li>CO₂ has increased by <strong>~25%</strong> in the last 150 years due to burning fossil fuels +
+              deforestation.</li>
+            <li>Net anthropogenic CO₂ emissions: <strong>~6.6 billion metric tons/year</strong>; ~3.3 billion metric
+              tons added to atmosphere annually.</li>
+            <li><strong>Greenhouse gases</strong> (CO₂, water vapor, methane): slow the escape of heat from Earth to
+              space → contribute to global warming.</li>
+          </ul>
+        </div>
+
+        <hr class="divider">
+
+        <div class="topic">
+          <h3>🌧️ Coal and Acid Rain</h3>
+          <ul class="notes">
+            <li><strong>pH scale (0–14):</strong> pH &lt;7 = acidic; pH 7 = neutral; pH &gt;7 = basic/alkaline. Each
+              whole number = <strong>10× change</strong> in concentration.</li>
+            <li>Pure water = pH 7.0 (neutral). Natural rainwater = pH ~5.7 (mildly acidic — CO₂ dissolves to form
+              carbonic acid).</li>
+            <li>Acid rain is caused by: coal contains up to <strong>5% sulfur</strong> → burned → <strong>SO₂
+                gas</strong> released → reacts with O₂ then H₂O → <strong>sulfuric acid (H₂SO₄)</strong>.</li>
+          </ul>
+          <div class="formula">
+            <div class="eq-label">Acid Rain Formation</div>
+            <div class="eq">SO₃ + H₂O → H₂SO₄ (sulfuric acid)</div>
+            <div class="eq">H₂SO₄ → H⁺ + HSO₃⁻ → 2H⁺ + SO₄²⁻</div>
+          </div>
+          <ul class="notes">
+            <li>Burning fuels also produces <strong>nitrogen oxides → nitric acid</strong> — another acid rain
+              contributor.</li>
+            <li>Acid rain most severe in the <strong>Northeast US</strong> because: coal power plants are in the Midwest
+              (Ohio, Michigan, Illinois); prevailing winds blow west-to-east; bedrock in the Northeast is
+              <strong>granite</strong> (cannot neutralize acid).
+            </li>
+            <li>Where bedrock is <strong>limestone or marble</strong>: rock dissolves and neutralizes acid → buffers the
+              pH.</li>
+            <li>Acid rain effects: kills fish, insects, aquatic plants, plankton → "dead lakes" (entire food web
+              disrupted).</li>
+          </ul>
+
+          <div class="topic" style="margin-top:1rem;">
+            <h3>🏭 Scrubbing Technology</h3>
+            <ul class="notes">
+              <li>Process: <strong>flue-gas desulfurization</strong> (scrubbing) removes SO₂ from power plant exhaust.
+              </li>
+              <li><strong>Wet scrubber:</strong> flue gas sprayed with calcium carbonate slurry → SO₂ → calcium sulfate
+                (CaSO₄ / gypsum). Can remove up to <strong>95%</strong> of SO₂.</li>
+              <li>Useful by-product: pure <strong>gypsum</strong> → used to make plaster and wallboard.</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="topic">
+          <h3>🌊 Oil Spills and the Environment</h3>
+          <ul class="notes">
+            <li>Global oil consumption grew from 21 million barrels/day (1960) to over <strong>84 million
+                barrels/day</strong> (2009).</li>
+            <li>Oil spills occur during: transfer to vessels, ocean transport, pipeline breaks, drilling operations.
+            </li>
+            <li><strong>Environmental impacts:</strong>
+              <ul class="notes" style="margin-left:1rem;">
+                <li>Waves and currents move oil on shore → oil saturates beach sand/gravel → harms coastal vegetation.
+                </li>
+                <li>Rocks/boulders coated with oil → toxic to coastal wildlife.</li>
+                <li>Marine life poisoned and smothered (oil is sticky + toxic).</li>
+                <li>Disrupts marine food chain; bottom organic matter contaminated.</li>
+                <li>Human health: inhaling fumes, eating contaminated fish/shellfish.</li>
+                <li>Economic: housing values drop, recreational activities decline.</li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="topic" style="margin-top:1rem;">
+            <h3>⚓ Deepwater Horizon (Case Study — KNOW THIS!)</h3>
+            <ul class="notes">
+              <li><strong>Date:</strong> April 20, 2010 — explosion on offshore platform in Gulf of Mexico, ~80 km SE of
+                Mississippi River delta.</li>
+              <li>Platform sank in <strong>~1,500 m</strong> of water 2 days later. 11 workers never found.</li>
+              <li>Blowout preventer failed. 125-ton containment dome failed.</li>
+              <li>Oil flow stopped: <strong>July 15, 2010</strong> — 86 days after the explosion. Then cement sealed the
+                well.</li>
+              <li>Leaked oil: approximately <strong>4.9 million barrels</strong>.</li>
+              <li>Oil slick: up to <strong>75,000 km²</strong> (≈ size of South Carolina).</li>
+              <li>Oil reached shores of Louisiana, Mississippi, Alabama, Florida.</li>
+              <li>Cleanup methods: fire booms (U-shaped towed devices for controlled burning), dispersants (chemicals),
+                sand berms.</li>
+              <li>Considered the <strong>worst environmental disaster in US history</strong>.</li>
+            </ul>
+            <div class="exam-alert">
+              <div class="icon">⚠️</div>
+              <div class="content">
+                <div class="ea-label">Exam Watch</div>
+                <p>Be ready to recall specific Deepwater Horizon facts: date, location, duration, amount of oil, area of
+                  slick, cleanup methods, and its status as the worst US environmental disaster.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vocab-grid">
+          <div class="vocab-card">
+            <div class="term">Carbon Cycle</div>
+            <div class="def">Continuous exchange and recycling of carbon through the Earth system (atmosphere,
+              biosphere, geosphere, hydrosphere).</div>
+          </div>
+          <div class="vocab-card">
+            <div class="term">Greenhouse Gases</div>
+            <div class="def">Gases (CO₂, water vapor, methane) that absorb long-wavelength radiation emitted by Earth,
+              slowing heat loss to space.</div>
+          </div>
+          <div class="vocab-card">
+            <div class="term">Acid (pH &lt;7)</div>
+            <div class="def">Solution with high concentration of hydrogen ions (H⁺). Each pH unit = 10× more acidic than
+              next higher value.</div>
+          </div>
+          <div class="vocab-card">
+            <div class="term">Scrubbing</div>
+            <div class="def">Flue-gas desulfurization — removes SO₂ and other pollutants from combustion gases before
+              release.</div>
+          </div>
+          <div class="vocab-card">
+            <div class="term">Anthropogenic</div>
+            <div class="def">Generated or produced by human activities (e.g., anthropogenic CO₂ emissions from burning
+              fossil fuels).</div>
+          </div>
+        </div>
+
+        <div class="quick-check">
+          <div class="qc-title">🎯 Key Questions (from Checking Up)</div>
+          <ol>
+            <li>Describe the carbon cycle in relation to fossil fuel consumption.</li>
+            <li>Explain "Earth is a closed system with respect to matter" — how does this relate to conservation of
+              matter?</li>
+            <li>In your own words, explain the concept of pH.</li>
+            <li>Why is acid rain a greater problem in the Northeast than elsewhere in the US?</li>
+            <li>How is sulfur dioxide removed from gases emitted by coal-fueled power plants?</li>
+            <li>Describe some of the impacts of an oil spill on the environment.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════ -->
+    <!-- SECTION 5 -->
+    <!-- ══════════════════════════════════════════════════════ -->
+    <div class="section" id="s5">
+      <div class="section-header">
+        <div class="section-num">5</div>
+        <div class="section-title-block">
+          <div class="subtitle">Section 5 · Digging Deeper</div>
+          <h2>Renewable Energy Sources — Solar and Wind</h2>
+        </div>
+      </div>
+      <div class="section-body">
+
+        <div class="key-concept">
+          <div class="kc-label">Core Idea</div>
+          <p>Solar energy comes from nuclear fusion in the Sun and reaches Earth as electromagnetic radiation. It can be
+            used for heating (active/passive) and electricity generation (photovoltaics). Wind power is also
+            solar-derived and increasingly important for electricity generation.</p>
+        </div>
+
+        <div class="topic">
+          <h3>☀️ How Solar Energy Works</h3>
+          <ul class="notes">
+            <li>Solar energy is produced in the Sun's core through <strong>nuclear fusion</strong> (hydrogen atoms fused
+              → helium atoms; tiny amount of mass → energy).</li>
+            <li>Sun's surface radiates <strong>electromagnetic energy</strong> in all directions — mostly visible light,
+              plus ultraviolet (shorter) and infrared (longer) wavelengths.</li>
+            <li>Solar radiation travels at the <strong>speed of light</strong>; reaches Earth in about <strong>8
+                minutes</strong>.</li>
+            <li>Only a very small fraction of solar energy reaches Earth — but more than enough for all of Earth's needs
+              if practically captured.</li>
+            <li>The Sun has been producing energy for <strong>~5 billion years</strong> and will continue for a few
+              billion more.</li>
+          </ul>
+        </div>
+
+        <hr class="divider">
+
+        <div class="topic">
+          <h3>📐 Insolation — Factors Affecting Solar Energy Receipt</h3>
+          <ul class="notes">
+            <li><strong>Insolation:</strong> the rate at which a given area of land receives solar energy (W/m²).</li>
+            <li>Maximum insolation = <strong>~1,000 W/m²</strong> (Sun directly overhead, clear sky, sea level).</li>
+            <li>Factors that affect insolation:
+              <ul class="notes" style="margin-left:1rem;">
+                <li>Latitude (higher latitude = more atmosphere to pass through)</li>
+                <li>Season (Earth's axis tilted 23.5° → summer = longer days, higher Sun)</li>
+                <li>Time of day</li>
+                <li>Cloudiness of the sky</li>
+                <li>Clearness of the air</li>
+                <li>Slope of the land surface (perpendicular to Sun's rays = maximum)</li>
+              </ul>
+            </li>
+            <li>Earth's axis tilted <strong>23.5°</strong> from the plane of its orbit around the Sun. Points toward Sun
+              in Northern Hemisphere summer → long days, high Sun; points away in winter → short days, low Sun.</li>
+          </ul>
+        </div>
+
+        <hr class="divider">
+
+        <div class="topic">
+          <h3>🏠 Solar Heating Systems</h3>
+          <div class="compare-row">
+            <div class="compare-card pros">
+              <div class="cc-label">Active Solar Heating</div>
+              <ul>
+                <li>Uses special solar collector equipment</li>
+                <li>Collects and distributes solar energy mechanically</li>
+                <li>More effective than passive</li>
+                <li>Solar collector = thin flat box with transparent cover and black plate</li>
+                <li>Cool water circulates through → warmed → stored</li>
+              </ul>
+            </div>
+            <div class="compare-card cons">
+              <div class="cc-label">Passive Solar Heating</div>
+              <ul>
+                <li>Home designed to let in large amounts of sunlight</li>
+                <li>No special mechanical equipment</li>
+                <li>Less effective than active</li>
+                <li>Large south-facing windows + overhangs</li>
+                <li>Materials in floors/walls absorb &amp; store heat by day, release at night</li>
+              </ul>
+            </div>
+          </div>
+          <ul class="notes">
+            <li>Solar water heating efficiency: heating water with fossil fuels is only <strong>60% efficient</strong>;
+              electric water heaters ~90%; but electricity from fossil fuels is only <strong>30–40% efficient</strong>.
+            </li>
+            <li>Solar water heating also <strong>eliminates air pollution</strong> from water heating.</li>
+          </ul>
+        </div>
+
+        <hr class="divider">
+
+        <div class="topic">
+          <h3>⚡ Photovoltaics (PV Cells / Solar Cells)</h3>
+          <ul class="notes">
+            <li><strong>Photovoltaic (PV) cells</strong> convert <em>light energy directly into electricity</em>.</li>
+            <li>Used in: toys, calculators, roadside phones, water pumps, communications equipment, home appliances.
+            </li>
+            <li>Efficiency is not high but is increasing as new materials are developed.</li>
+            <li>In many remote cases, PV power is the <strong>cheapest form of electricity</strong> available.</li>
+          </ul>
+        </div>
+
+        <hr class="divider">
+
+        <div class="topic">
+          <h3>💨 Wind Power</h3>
+          <ul class="notes">
+            <li>Wind power used for water pumping for hundreds of years; electricity generation started about 35 years
+              ago.</li>
+            <li>Triple-blade propeller = most popular wind turbine design.</li>
+            <li><strong>Texas</strong> leads the US in wind power generation (2010: 9,727 MW capacity; tens of thousands
+              of turbines).</li>
+            <li>Other high-potential areas: Rocky Mountains, flat Midwest states, Alaska.</li>
+            <li>Commercial wind turbine blades can be up to <strong>60 m in diameter</strong>.</li>
+            <li>Can be used on large scale (wind farms) or small scale (households).</li>
+          </ul>
+        </div>
+
+        <div class="exam-alert">
+          <div class="icon">⚠️</div>
+          <div class="content">
+            <div class="ea-label">Exam Watch</div>
+            <p>Solar energy must occupy a MUCH larger area per unit of energy than fossil fuels because insolation is
+              spread out over a large area and is not very intense in any small area. This is a fundamental limitation
+              of solar power — know how to explain it.</p>
+          </div>
+        </div>
+
+        <div class="quick-check">
+          <div class="qc-title">🎯 Key Questions (from Checking Up)</div>
+          <ol>
+            <li>How does the Sun produce solar energy?</li>
+            <li>What factors determine the rate at which a given area of Earth's surface receives solar energy?</li>
+            <li>What are the differences between passive and active solar heating systems?</li>
+            <li>Why must solar energy systems occupy a much larger area per unit of energy than conventional fossil fuel
+              systems?</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════ -->
+    <!-- SECTION 6 -->
+    <!-- ══════════════════════════════════════════════════════ -->
+    <div class="section" id="s6">
+      <div class="section-header">
+        <div class="section-num">6</div>
+        <div class="section-title-block">
+          <div class="subtitle">Section 6 · Digging Deeper</div>
+          <h2>Earth's Ore Resources</h2>
+        </div>
+      </div>
+      <div class="section-body">
+
+        <div class="key-concept">
+          <div class="kc-label">Core Idea</div>
+          <p>Most ore resources are found on continents, especially in orogenic belts. Ores form through specific
+            geological processes (especially hydrothermal activity). Finding them requires expensive, multi-technique
+            exploration — mapping, geochemistry, and geophysics.</p>
+        </div>
+
+        <div class="topic">
+          <h3>🌊 Ore Resources in the Ocean</h3>
+          <ul class="notes">
+            <li>Ocean water contains huge amounts of chemical elements — but concentrations are <strong>extremely
+                small</strong> → too expensive to extract most of them.</li>
+            <li>Example: Gold in ocean water = only <strong>0.011 µg per liter</strong> → over 10 billion kg total, but
+              extraction is uneconomical.</li>
+            <li><strong>Iron–manganese nodules:</strong> dark, rounded masses on deep ocean floor (especially Pacific).
+              Range from golf-ball to fist size. Contain iron, manganese, and other elements. Mining techniques exist
+              but:
+              <ul class="notes" style="margin-left:1rem;">
+                <li>Sediment stirred up would harm deep-ocean environments.</li>
+                <li>Open oceans belong to all of humanity — ownership issues.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <hr class="divider">
+
+        <div class="topic">
+          <h3>⛰️ Mineral Resources of the Continents</h3>
+          <ul class="notes">
+            <li>Oldest continental bedrock = <strong>4 billion years old</strong> (Earth itself = 4.5 billion years).
+            </li>
+            <li>Most rocks (sandstone, shale, limestone, granite, basalt, schist, gneiss) do NOT contain economically
+              valuable minerals. However, many are used as building stones.</li>
+            <li>Metal mining takes up <strong>less than 0.1%</strong> of total US land area.</li>
+            <li><strong>Orogenic belts</strong> (mountain-building regions) = areas where lithospheric plate collisions
+              caused uplift. These areas are most associated with ores (igneous activity → ore deposition).</li>
+            <li>Most ore-forming regions are in the western US (complex geology) and some eastern US areas.</li>
+          </ul>
+
+          <div class="topic" style="margin-top:1rem;">
+            <h3>🔥 Hydrothermal Activity — Most Important Ore-Forming Process</h3>
+            <ul class="notes">
+              <li>Magmas contain small amounts of valuable chemical elements.</li>
+              <li>These elements become concentrated in water-rich "juices" left over after most of magma crystallizes.
+              </li>
+              <li>Juices work upward → cool → unusual minerals crystallize → <strong>hydrothermal ore deposits</strong>.
+              </li>
+              <li>Metals from hydrothermal deposits: <strong>copper, zinc, tin, lead, mercury, gold, silver,
+                  platinum</strong>.</li>
+            </ul>
+          </div>
+
+          <div class="topic" style="margin-top:1rem;">
+            <h3>🔩 Iron and Aluminum — The Two Most-Used Metals</h3>
+            <ul class="notes">
+              <li><strong>Iron ore:</strong> from special iron-rich sedimentary rocks deposited in ancient oceans. Mined
+                in <strong>northern Minnesota and northern Michigan</strong>.</li>
+              <li><strong>Aluminum ore (bauxite):</strong> aluminum oxides formed by weathering of aluminum-bearing
+                rocks in warm, humid climates. Some mined in US, but <strong>most imported</strong>.</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="topic">
+          <h3>🔍 Finding Minerals — Exploration Techniques</h3>
+          <ul class="notes">
+            <li>Drilling = most expensive exploration method ($150/m for mineral holes; millions of dollars for oil
+              holes).</li>
+            <li>Geologists use multiple techniques to narrow down areas before drilling.</li>
+          </ul>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Technique</th>
+                <th>Who Uses It</th>
+                <th>What It Does</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mapping</td>
+                <td>Geologists</td>
+                <td>Maps rock types, folds, faults, fractures, unusual colors at surface. Uses "guides to ore."</td>
+              </tr>
+              <tr>
+                <td>Geochemistry</td>
+                <td>Geochemists</td>
+                <td>Analyzes chemistry of rocks, soil, vegetation, water. Chemical "halos" indicate buried deposits.
+                </td>
+              </tr>
+              <tr>
+                <td>Seismic-Wave Reflection</td>
+                <td>Geophysicists</td>
+                <td>Small explosion/strike vibration → reflects off rock layers → geophone records return time → reveals
+                  depth, folds, faults.</td>
+              </tr>
+              <tr>
+                <td>Gravity (Gravimetry)</td>
+                <td>Geophysicists</td>
+                <td>Gravimeter detects local variations in Earth's gravity. Ores are denser → slightly stronger gravity
+                  field above them.</td>
+              </tr>
+              <tr>
+                <td>Magnetometry</td>
+                <td>Geophysicists</td>
+                <td>Magnetometer detects changes in Earth's magnetic field. Iron-bearing rocks affect local magnetic
+                  field.</td>
+              </tr>
+              <tr>
+                <td>Electrical Conductivity</td>
+                <td>Geophysicists</td>
+                <td>Current put into ground. Metallic minerals conduct electricity well — indicates ore presence.</td>
+              </tr>
+            </tbody>
+          </table>
+          <ul class="notes">
+            <li><strong>Geophone:</strong> seismic detector placed on/in the ground that records ground motion.</li>
+            <li><strong>Gravimeter:</strong> instrument measuring variations in Earth's gravitational field.</li>
+            <li><strong>Magnetometer:</strong> instrument measuring variations in Earth's magnetic field.</li>
+            <li>Millions of dollars spent on exploration — only a very small number of explored areas become profitable
+              mines.</li>
+          </ul>
+        </div>
+
+        <div class="exam-alert">
+          <div class="icon">⚠️</div>
+          <div class="content">
+            <div class="ea-label">Exam Watch</div>
+            <p>Know WHY ores are associated with orogenic belts (igneous activity during mountain-building →
+              hydrothermal deposits). Also know the 2 most-used metals (iron + aluminum), their ore types, and where
+              they are found. Be able to compare all exploration techniques.</p>
+          </div>
+        </div>
+
+        <div class="quick-check">
+          <div class="qc-title">🎯 Key Questions (from Checking Up)</div>
+          <ol>
+            <li>What mineral resources are retrieved from the oceans?</li>
+            <li>What mineral resources are produced through hydrothermal activity?</li>
+            <li>What are the two most commonly used metals and where do they come from?</li>
+            <li>What are the benefits of mineral exploration?</li>
+            <li>What geophysical technique did you use to survey the model in class?</li>
+            <li>How do maps help geologists be more successful in exploration?</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════ -->
+    <!-- SECTION 7 -->
+    <!-- ══════════════════════════════════════════════════════ -->
+    <div class="section" id="s7">
+      <div class="section-header">
+        <div class="section-num">7</div>
+        <div class="section-title-block">
+          <div class="subtitle">Section 7 · Digging Deeper</div>
+          <h2>The Costs and Benefits of Mining Minerals</h2>
+        </div>
+      </div>
+      <div class="section-body">
+
+        <div class="key-concept">
+          <div class="kc-label">Core Idea</div>
+          <p>Minerals are extracted using surface mining (open-pit, strip, quarry) or underground mining. The method
+            depends on ore depth, size, grade, and cost. Mining has significant environmental impacts, requiring
+            reclamation, and poses safety risks to workers.</p>
+        </div>
+
+        <div class="topic">
+          <h3>🏔️ Surface Mining</h3>
+          <ul class="notes">
+            <li>Most minerals in the US are removed by <strong>surface mining</strong>.</li>
+            <li><strong>Open-pit mining:</strong> large ore body close to surface. Earth-moving equipment removes soil
+              and overburden → series of benches and roads wind into a large deep pit → ore drilled, blasted, loaded
+              into trucks → transported to crushers/refineries.</li>
+            <li>Topsoil stored in piles for later reclamation. Overburden called <strong>spoil</strong>.</li>
+            <li>Example: <strong>Bingham Canyon copper mine</strong>, near Salt Lake City, Utah — one of the largest
+              open-pits in the world (~2 miles diameter, &gt;½ mile deep).</li>
+            <li><strong>Strip mining:</strong> used for thin, widespread, sheet-like deposits near the surface (much of
+              western US coal; future oil shale in Colorado/Wyoming).</li>
+            <li><strong>Dimension stone quarries:</strong> large blocks of granite, marble, limestone, or sandstone
+              removed intact (not crushed).</li>
+            <li>Resources from surface mines: sand, gravel, coal, phosphate, iron ore, copper ore.</li>
+          </ul>
+        </div>
+
+        <hr class="divider">
+
+        <div class="topic">
+          <h3>⛏️ Underground Mining</h3>
+          <ul class="notes">
+            <li>Used when mineral resources lie <strong>deep beneath the surface</strong> OR the ore body has irregular
+              geometry.</li>
+            <li>Shafts and tunnels provide access and ventilation (vertical, horizontal, inclined, or corkscrew-shaped
+              depending on ore orientation).</li>
+            <li>Ore hauled to surface by trains, loaders, trucks, or elevators.</li>
+            <li>Large "rooms" formed when ore is removed; <strong>pillars</strong> of ore/waste rock left to support the
+              mine roof.</li>
+            <li>Modern technique: <strong>back-filling tunnels</strong> → recovers ore pillars, prevents cave-ins,
+              prevents acid mine drainage.</li>
+            <li>Trackless semi-automated equipment reduces number of people exposed to underground hazards.</li>
+          </ul>
+        </div>
+
+        <hr class="divider">
+
+        <div class="topic">
+          <h3>🌿 Environmental and Safety Concerns</h3>
+          <ul class="notes">
+            <li>Surface mining: removes overburden + vegetation → destroys ecosystems; changes water runoff patterns;
+              dissolved chemicals from exposed rocks can pollute surface and groundwater.</li>
+            <li><strong>All US states require reclamation plans</strong> before any ground is disturbed:
+              <ol style="padding-left:1.2rem;font-size:14px;">
+                <li>Spread spoil back over mined area to restore topography.</li>
+                <li>Spread available topsoil from original stripping over spoil.</li>
+                <li>Replant native trees and shrubs.</li>
+              </ol>
+            </li>
+            <li>Most mining deaths in the US = poorly maintained equipment + failure to wear safety gear + working in
+              unsafe locations.</li>
+            <li>Underground collapses are much less frequent in the US than other countries.</li>
+            <li>Hazardous materials exposure: <strong>silica dust, heavy metals, asbestos fibers</strong> can cause
+              serious illnesses. Exposure must be constantly monitored and limited.</li>
+          </ul>
+        </div>
+
+        <div class="compare-row">
+          <div class="compare-card pros">
+            <div class="cc-label">Surface Mining Advantages</div>
+            <ul>
+              <li>Less expensive for large, shallow deposits</li>
+              <li>Safer for workers (no tunnel collapse risk)</li>
+              <li>Can use large equipment for efficiency</li>
+              <li>Better ore recovery</li>
+            </ul>
+          </div>
+          <div class="compare-card cons">
+            <div class="cc-label">Surface Mining Disadvantages</div>
+            <ul>
+              <li>Destroys ecosystems and vegetation</li>
+              <li>Alters water runoff patterns</li>
+              <li>Chemical pollution of water</li>
+              <li>Large land area disturbed</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="vocab-grid">
+          <div class="vocab-card">
+            <div class="term">Spoil</div>
+            <div class="def">Overburden and other waste material removed in mining, quarrying, dredging, or excavating.
+            </div>
+          </div>
+          <div class="vocab-card">
+            <div class="term">Overburden</div>
+            <div class="def">Rock material that lies over a mineral deposit and must be removed prior to mining.</div>
+          </div>
+          <div class="vocab-card">
+            <div class="term">Open-Pit Mining</div>
+            <div class="def">Surface mining method where large equipment removes soil/rock above a large, near-surface
+              ore body in a series of benches.</div>
+          </div>
+          <div class="vocab-card">
+            <div class="term">Strip Mining</div>
+            <div class="def">Surface mining for thin, widespread, sheet-like deposits near the surface (e.g., western US
+              coal, future oil shale).</div>
+          </div>
+          <div class="vocab-card">
+            <div class="term">Ore</div>
+            <div class="def">A rock that contains valuable minerals in concentrations worth mining economically.</div>
+          </div>
+        </div>
+
+        <div class="exam-alert">
+          <div class="icon">⚠️</div>
+          <div class="content">
+            <div class="ea-label">Exam Watch</div>
+            <p>Know the difference between surface and underground mining, AND when each is used (depends on depth,
+              size, grade, geometry of ore body). Know the full reclamation process (3 steps). Be able to list
+              environmental AND safety concerns of each type.</p>
+          </div>
+        </div>
+
+        <div class="quick-check">
+          <div class="qc-title">🎯 Key Questions (from Checking Up)</div>
+          <ol>
+            <li>What are the two main kinds of mining? Which kind did your model simulate?</li>
+            <li>What types of mineral resources are extracted from surface mines?</li>
+            <li>What are some of the hazards associated with underground mining?</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- FINAL SUMMARY CARD -->
+    <div class="section" style="background: var(--accent); color:#fff; border:none;">
+      <div style="padding:1.5rem 1.75rem;">
+        <h2 style="font-family:'Playfair Display',serif; font-size:1.4rem; color:#fff; margin-bottom:1rem;">📚 Master
+          Summary — Key Numbers to Memorize</h2>
+        <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap:10px;">
+          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px 14px;">
+            <div
+              style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:3px;">
+              Fossil fuels % US electricity</div>
+            <div style="font-size:1.4rem;font-weight:700;color:#fff;">~70%</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px 14px;">
+            <div
+              style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:3px;">
+              Coal % US electricity (2009)</div>
+            <div style="font-size:1.4rem;font-weight:700;color:#fff;">45%</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px 14px;">
+            <div
+              style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:3px;">
+              Coal share of fossil fuel reserves</div>
+            <div style="font-size:1.4rem;font-weight:700;color:#fff;">92%</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px 14px;">
+            <div
+              style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:3px;">
+              Hydroelectric % from Pacific/Rocky Mtn</div>
+            <div style="font-size:1.4rem;font-weight:700;color:#fff;">70%</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px 14px;">
+            <div
+              style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:3px;">
+              CO₂ rise in last 150 years</div>
+            <div style="font-size:1.4rem;font-weight:700;color:#fff;">~25%</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px 14px;">
+            <div
+              style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:3px;">
+              Max insolation at Earth's surface</div>
+            <div style="font-size:1.4rem;font-weight:700;color:#fff;">1000 W/m²</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px 14px;">
+            <div
+              style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:3px;">
+              Deepwater Horizon oil spill</div>
+            <div style="font-size:1.4rem;font-weight:700;color:#fff;">4.9M barrels</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px 14px;">
+            <div
+              style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:3px;">
+              Scrubbers remove SO₂</div>
+            <div style="font-size:1.4rem;font-weight:700;color:#fff;">Up to 95%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /wrapper -->
+
+  <div class="footer">
+    Chapter 7 · Earth's Natural Resources · EarthComm · © 2026 by <i>Abdulrahman Eltahhan Gh'28</i>, Inc. · All rights
+    reserved.
+  </div>
+
+</body>
+
+</html>
